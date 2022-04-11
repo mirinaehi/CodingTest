@@ -15,10 +15,10 @@ int main(void)
 
 	for (int i = 0; i < 3; i++)
 	{
-		printf("%d ", arr[i][0]);
-		printf("%d ", arr[i][1]);
-		printf("%d ", arr[i][2]);
-		printf("%d ", arr[i][3]);
+		for (int j = 0; j < 4; j++)
+		{
+			printf("%d ", arr[i][j]);
+		}
 		printf("\n");
 	}
 }
