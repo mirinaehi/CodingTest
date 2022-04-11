@@ -13,21 +13,12 @@ int main(void)
 	//	printf("%d ", arr[i]);
 	//}
 
-	printf("%d ", arr[0][0]);
-	printf("%d ", arr[0][1]);
-	printf("%d ", arr[0][2]);
-	printf("%d ", arr[0][3]);
-	printf("\n");
-	printf("%d ", arr[1][0]);
-	printf("%d ", arr[1][1]);
-	printf("%d ", arr[1][2]);
-	printf("%d ", arr[1][3]);
-	printf("\n");
-	printf("%d ", arr[2][0]);
-	printf("%d ", arr[2][1]);
-	printf("%d ", arr[2][2]);
-	printf("%d ", arr[2][3]);
-	printf("\n");
-	
-
+	for (int i = 0; i < 3; i++)
+	{
+		printf("%d ", arr[i][0]);
+		printf("%d ", arr[i][1]);
+		printf("%d ", arr[i][2]);
+		printf("%d ", arr[i][3]);
+		printf("\n");
+	}
 }
