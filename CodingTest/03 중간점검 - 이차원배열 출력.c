@@ -10,9 +10,8 @@ int main(void)
 	int length = 0;		// 문자열의 길이
 
 	// 문자로 판별될 경우 length를 카운팅(1씩 증가)
-	for (int i = 0; i < 30; i++)
+	for (int i = 0; str[i] != '\0'; i++)
 	{
-		if(str[i] != '\0')
 			length++;
 	}
 	printf("길이는 %d", length);
