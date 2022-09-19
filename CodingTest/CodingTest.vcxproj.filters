@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="문제04.c">
+    <ClCompile Include="07 동적할당 정적할당.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
