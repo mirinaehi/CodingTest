@@ -6,14 +6,19 @@
 // words 그냥 문자열이 들어가 있는 것
 // 5개이상의 문자열만 걸러서 넣는다
 char* solution(char* words[], int words_len) {
-    char* answer = "";
+    // 단어의 갯수 최대 100개 X 한 단어당 10개 + '/0'공간 1개,
+    // 동적할당 못하겠으면 이렇게 풀 것
+    char answer[1001] = "";
     
     // 길이5이상의 문자열만 answer에 넣을거다
     for(int i=0; i<words_len; i++)
         if (strlen(words[i]) >= 5)
             strcat(answer, words[i]);
 
-
+    // answer에 아무 글자도 없을때, answer는 "empty"
+    if (strlen(answer) == 0)
+        strcat(answer, "empty");  // 빈 문자열 answer에 "empty" 추가
+        
     return answer;
 }
 
