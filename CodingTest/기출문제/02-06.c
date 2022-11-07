@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int solution(int floors[], int floors_len) {
-    // 2(floors[1]) - 1(floors[0]) = 1  
+    // 2(floors[1]) - 1(floors[0]) = 1
     // 5(floors[2]) - 2(floors[1]) = 3
     // 4(floors[3]) - 5(floors[2]) = 1
     // 2(floors[4]) - 4(floors[3]) = 2
