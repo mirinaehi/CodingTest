@@ -6,24 +6,17 @@ int solution(int scores[], int scores_len) {
     int answer = 0;
     int max = -1;   // 매개변수 설명에서 0~100
     int min = 101;
-    // scores에 있는 모든 값을 더한다 -> a
+
     for (int i = 0; i < scores_len; i++)
     {
         answer += scores[i];
-    }
-    
-    // a에 최대값과 최소값을 뺀다 -> b
-    for (int i = 0; i < scores_len; i++)
-    {
         if (max < scores[i])
             max = scores[i];
         if (min > scores[i])
             min = scores[i];
     }
-    answer = answer - min - max;
-
-    // b / (scores_len-2)
-    return answer / (scores_len-2);
+    
+    return (answer - min - max) / (scores_len-2);
 }
 
 int main() {
