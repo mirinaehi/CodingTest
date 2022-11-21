@@ -5,16 +5,25 @@
 
 int solution(int num_apple, int num_carrot, int k) {
     int answer = 0;
+    
+    // 먹이(k)를 주지 않았을때 만들 수 있는 주스의 갯수(answer)
+    {
+    // 사과가 부족한 경우
     if (num_apple < 3 * num_carrot)
         answer = num_apple / 3;
+    // 당근이 부족한 경우
     else
         answer = num_carrot;
+
+    // 주스를 만들고 나서 남은 사과, 당근의 갯수
     num_apple -= 3 * answer;
     num_carrot -= answer;
+    }
 
+    // 먹이를 주는것 까지 고려해서 만들 수 있는 주스의 갯수
     for (int i = 0; k - (num_apple + num_carrot + i) > 0; i++)
         if (i % 4 == 0)
-            answer++;
+            answer--;   // 주스의 갯수(answer)는 줄어들어야 한다
     return answer;
 }
 
